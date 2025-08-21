@@ -5,10 +5,12 @@ function ButtonRow({changeColor}) {
     const setColor = (color) => {
         changeColor(color);
     }
+    const colors = ["red","green","blue","yellow","orange","purple"];
     return (
         <div className="row6">
-            <ColorButton color="red"   changeColor={setColor} />
-            <ColorButton color="green" changeColor={setColor} />
+            {colors.map((color) => {
+                return <ColorButton key={color} color={color} changeColor={setColor} />
+            })}
         </div>
     );
 }
