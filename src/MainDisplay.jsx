@@ -1,7 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 
-function MainDisplay(props) {
-    const [mainColor, setMainColor] = useState("transparent")
+function MainDisplay({mainColor}) {
     return (
         <div className="bigDiv" style={{backgroundColor:mainColor}}></div>
     );
