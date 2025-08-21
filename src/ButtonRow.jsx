@@ -3,25 +3,13 @@ import ColorButton from "./ColorButton.jsx";
 
 function ButtonRow({changeColor}) {
     const setColor = (color) => {
-        return () => {
-            changeColor(color)
-        }
-    }
-    const setRed = () => {
-        return () => {
-            changeColor("red")
-        }
-    }
-    const setGreen = () => {
-        return () => {
-            changeColor("green")
-        }
+        changeColor(color);
     }
     return (
-        <>
-            <ColorButton color="red"  changeColor={setRed} />
-            <ColorButton color="green" changeColor={setGreen} />
-        </>
+        <div className="row6">
+            <ColorButton color="red"   changeColor={setColor} />
+            <ColorButton color="green" changeColor={setColor} />
+        </div>
     );
 }
 

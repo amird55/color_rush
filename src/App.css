@@ -1,10 +1,18 @@
 .bigDiv{
     width: 200px;
     height: 200px;
-    background-color: purple;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px auto;
 }
 .roundButton{
     border-radius: 50%;
     height: 100px;
     width: 100px;
+    margin: 10px;
+}
+.row6{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
 }
