@@ -11,16 +11,16 @@ function RushShow() {
         let newClicks = {...clicks,[color]:cnt};
         setClicks(newClicks);
 
-        let bestColor = "";
-        for(let clr in newClicks){
-            if((bestColor==="")||(newClicks[clr]>newClicks[bestColor])){
-                bestColor = clr;
-            }
-        }
-        // const bestClr = newClicks.reduce((bst,val,clr) => {
-        //     console.log("newClicks",bst,val,clr);
-        //     return  clr ;
-        // },"");
+        // let bestColor = "";
+        // for(let clr in newClicks){
+        //     if((bestColor==="")||(newClicks[clr]>newClicks[bestColor])){
+        //         bestColor = clr;
+        //     }
+        // }
+        const bestColor = Object.entries(newClicks).reduce((best, [color, count]) => {
+            return (best === "" || count > newClicks[best]) ? color : best;
+        }, "");
+
         console.log(bestColor);
         setMainColor(bestColor);
     }
